@@ -1,0 +1,260 @@
+/* ========================================
+   WWE SUPERSTARS - MAIN STYLESHEET
+   ======================================== */
+
+
+/* ========================================
+   COLOURS
+   ======================================== */
+
+:root {
+    --black: #0B0B0F;
+    --red: #E21B2D;
+    --white: #F5F5F5;
+}
+
+
+/* ========================================
+   PAGE
+   ======================================== */
+
+body {
+    margin: 0;
+    padding: 40px;
+
+    background: var(--black);
+    color: var(--white);
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   WWE LOGO
+   ======================================== */
+
+.wwe-logo {
+    width: 300px;
+    height: auto;
+
+    display: block;
+
+    margin-bottom: 30px;
+
+    border-radius: 0 0 15px 15px;
+}
+
+
+/* ========================================
+   MAIN TITLE
+   ======================================== */
+
+h1 {
+    color: var(--white);
+
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    border-left: 7px solid var(--red);
+
+    padding-left: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================================
+   SUPERSTAR NAVIGATION
+   ======================================== */
+
+.superstar-list {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    padding: 0;
+
+    margin: 0 0 40px 0;
+}
+
+
+/* Each superstar item */
+
+.superstar-list li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: var(--red);
+
+    border-radius: 6px;
+
+    padding: 8px 15px;
+
+    transition: 0.2s ease;
+}
+
+
+/* Hover effect */
+
+.superstar-list li:hover {
+    background: var(--white);
+
+    transform: translateY(-3px);
+}
+
+
+/* Superstar links */
+
+.superstar-list li a {
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+
+/* Change link colour on hover */
+
+.superstar-list li:hover a {
+    color: var(--black);
+}
+
+
+/* ========================================
+   SMALL WRESTLER LOGOS
+   ======================================== */
+
+.superstar-logo {
+    width: 60px;
+    height: 60px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0;
+
+    border-radius: 5px;
+}
+
+
+/* ========================================
+   PARAGRAPHS
+   ======================================== */
+
+p {
+    max-width: 1100px;
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   WRESTLER INFORMATION LIST
+   ======================================== */
+
+body > ul:not(.superstar-list) {
+    max-width: 1200px;
+
+    padding-left: 25px;
+
+    list-style: disc;
+}
+
+
+/* Individual wrestler information */
+
+body > ul:not(.superstar-list) li {
+    margin-bottom: 12px;
+
+    color: var(--white);
+}
+
+
+/* Wrestler names */
+
+body > ul:not(.superstar-list) li strong {
+    color: var(--red);
+}
+
+
+/* ========================================
+   NORMAL LINKS
+   ======================================== */
+
+a {
+    color: var(--red);
+}
+
+a:hover {
+    color: var(--white);
+}
+
+
+/* ========================================
+   DIVIDER
+   ======================================== */
+
+hr {
+    border: 0;
+
+    height: 3px;
+
+    background: var(--red);
+
+    margin: 30px 0;
+}
+
+
+/* ========================================
+   MOBILE / SMALL SCREEN
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+    }
+
+
+    .wwe-logo {
+        width: 220px;
+    }
+
+
+    h1 {
+        font-size: 32px;
+    }
+
+
+    .superstar-list {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .superstar-list li {
+        width: auto;
+    }
+
+
+    .superstar-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+}
